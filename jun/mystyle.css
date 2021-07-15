@@ -1,0 +1,25 @@
+.grid-container {
+    display: grid;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ccc;
+  }
+  
+  .grid-item {
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+  }
+  
+  .container1 {
+    grid-template-columns: repeat(3, 100px);
+  }
+  
+  .container2 {
+    grid-template-columns: repeat(2, 1fr 2fr);
+  }
+
+  .center {
+    width: 300px;
+    margin: 0 auto;
+}
