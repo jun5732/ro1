@@ -27,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public'))); // public폴더에서 �
 //라우터랑 연결 
 app.use('/', indexRouter); 
 app.use('/test', testRouter);
+
+
 app.use('/users', usersRouter);
 
 

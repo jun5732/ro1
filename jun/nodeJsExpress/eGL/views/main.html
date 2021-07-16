@@ -1,0 +1,68 @@
+
+    <!doctype html>
+    <html>
+      <head>
+        <title>섭취한 식품의 1회분량에 해당하는 영양소 함량을 입력하세요</title>
+        <meta charset="utf-8">
+      </head>
+  <body>
+    <link rel="stylesheet" href="main.css">
+    <div class="login_wrapper">
+        <form action="http://localhost:3000/result" method="GET" >
+          <table width="100%" style="text-align:left; border:none">
+            <tr>
+                <td colspan="2" ><img src="a.png"></td>  
+                <td colspan="2" >
+                  <table width="100%" style="text-align:center; border:none">
+                    <td colspan="2" >
+                      <font size="2">섭취한 식품의 </font>
+                      <font size="5" >1회분량</font>
+                      <font size="2">에 해당하는 영양소함량을 입력하세요</font>
+                    </td>        
+                  </table>
+              </td>        
+            </tr>        
+        </table>
+        <br>
+          <div>
+            <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+            <label >섭취 식품명</label>
+            <input type="text" id="name" name="name" maxlength="20" >
+            <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          </div>
+          <br>
+          <div>
+            <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+            <label >탄수화물</label>
+            <input type="text" id="tan" name="tan" maxlength="20" >
+            <a>&nbsp g </a>
+          </div>
+          <div>
+            <label >단백질</label>
+            <input type="text" id="dan" name="dan" maxlength="20"  >
+            <a>&nbsp&nbsp&nbsp&nbsp&nbspg</a>
+          </div>
+          <div>
+            <label >지방</label>
+            <input type="text" id="ji" name="ji" maxlength="20"  >
+            <a>&nbsp&nbsp&nbsp&nbsp&nbspg</a>
+          </div>
+          <div>
+            <label >식이섬유</label>
+            <input type="text" id="sic" name="sic" maxlength="20"  >
+            <a>&nbsp&nbsp&nbsp&nbsp&nbspg</a>
+          </div>
+          <br>
+          <div>
+            <label >섭취분량</label>
+            <input type="text" id="sup" name="sup" maxlength="20"  >
+            <a>&nbsp화분</a>
+          </div>
+          <br>
+          <button type="submit" id="btn_login" >계 산</button>
+          
+      </div>  
+    </form>
+  </body>
+  </html>
+  
