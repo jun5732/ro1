@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력</title>
+    <link rel="stylesheet" href="./입력.css">
+
+    <script>
+                function cal(name){
+                    var xks = document.getElementById("xks").value;
+                    var eks = document.getElementById("eks").value;
+                    var wl = document.getElementById("wl").value;
+                    var tlr = document.getElementById("tlr").value;
+
+                    var tjq = document.getElementById("tjq").value;
+                    var tn;
+
+
+                  if (Number(xks)-Number(tlr) <10) {
+                    tn =  Number(3.2)+Number(0.393566429*(xks-tlr))-Number(0.205486363*wl)
+                    - Number(0.006877061*eks*eks) - Number(0.012675566*tlr*tlr);
+                    }
+
+                    else {
+                    tn =  Number(6.4)+Number(0.393566429*(xks-tlr))-Number(0.205486363*wl)
+                    - Number(0.006877061*eks*eks) - Number(0.012675566*tlr*tlr);
+                    }
+                    document.getElementById("tn").value = tn;
+                  }
+
+                  </script>
+
+</head>
+<body>
+
+
+  <form  action="출력.html" method="post">
+
+
+    <div class="wrap">
+        <div class="a">
+            <h2>섭취한 식품의 1회분량에 해당하는 영양소함량을 입력하세요</h2>
+            <div class="c">
+                <h4>섭취 식품명 :</h4>
+                <input type="text" name="" id="aud" placeholder="입력란">
+            </div>
+            <div class="b">
+                <h4>탄수화물 :</h4>
+                <input type="text" name="" id="xks" placeholder="입력란"> g<br><br>
+                <h4>단백질 :</h4>
+                <input type="text" name="" id="eks" placeholder="입력란"> g<br><br>
+                <h4>지방 :</h4>
+                <input type="text" name="" id="wl" placeholder="입력란"> g<br><br>
+                <h4>식이섬유 :</h4>
+                <input type="text" name="" id="tlr" placeholder="입력란"> g<br><br>
+                <h4>섭취분량 :</h4>
+                <input type="text" name="" id="tjq" placeholder="입력란"> 회분
+            </div>
+
+            <div class="d">
+                <h4>결과 :</h4>
+                <input type="text" name="" id="tn" >
+
+
+            <div class="submit">
+                <input type="button" name="" id="" value="계산" onclick="cal()"><br><br>
+                <input type="submit" value="다음 페이지">
+
+
+
+            </div>
+        </div>
+    </div>
+    </form>
+
+</body>
+</html>
