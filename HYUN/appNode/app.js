@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var testRouter = require('./routes/test');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
 
 // 셋팅값 찾아보기
@@ -15,6 +16,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
+
 
 app.use(logger('dev')); 
 app.use(express.json());
