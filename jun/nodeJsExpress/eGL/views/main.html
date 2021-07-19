@@ -2,19 +2,136 @@
     <!doctype html>
     <html>
       <head>
+        <script type="text/javascript">
+          function MoveFocus() {
+            if (window.event.keyCode == 13) {              
+              focusEle = document.activeElement;
+              switch(focusEle)
+              {
+                case document.getElementById('name'):
+                  document.getElementById('tan').focus();
+                  break;
+                case document.getElementById('tan'):
+                  document.getElementById('dan').focus();
+                  break;
+                case document.getElementById('dan'):
+                  document.getElementById('ji').focus();
+                  break;
+                case document.getElementById('ji'):
+                  document.getElementById('sic').focus();
+                  break;
+                case document.getElementById('sic'):
+                  document.getElementById('sup').focus();
+                  break;
+                case document.getElementById('sup'):
+                  CheckLen();
+                  break;
+              }
+            }
+          }
+
+          function CheckLen() {
+            if(document.getElementById('name').value.length < 1)
+            {
+              alert("섭취 식품명을 입력 하세요.");           // 실행코드
+              document.getElementById('name').focus();
+            }
+            else if(document.getElementById('tan').value.length < 1)
+            {
+              alert("탄수화물을 입력하세요.");           // 실행코드
+              document.getElementById('tan').focus();
+            }
+            else if(document.getElementById('dan').value.length < 1)
+            {
+              alert("단백질을 입력 하세요.");           // 실행코드
+              document.getElementById('dan').focus();
+            }
+            else if(document.getElementById('ji').value.length < 1)
+            {
+              alert("지방을 입력 하세요.");           // 실행코드
+              document.getElementById('ji').focus();
+            }
+            else if(document.getElementById('sic').value.length < 1)
+            {
+              alert("식이섬유를 입력 하세요.");           // 실행코드
+              document.getElementById('sic').focus();
+            }
+            else if(document.getElementById('sup').value.length < 1)
+            {
+              alert("섭취분량을 입력 하세요.");           // 실행코드
+              document.getElementById('sup').focus();
+            }
+            else
+            {
+              var frm=document.fomMain;  //폼 name
+              frm.action="http://localhost:3000/result";  //이동할 페이지
+              frm.method="get";  //POST방식
+              frm.submit();
+            }
+        } 
+        </script>
         <title>섭취한 식품의 1회분량에 해당하는 영양소 함량을 입력하세요</title>
         <meta charset="utf-8">
       </head>
   <body>
-    <link rel="stylesheet" href="main.css">
-    <div class="login_wrapper">
-        <form action="http://localhost:3000/result" method="GET" >
-          <table width="100%" style="text-align:left; border:none">
+    
+    <!-- <p> <input type="text" name="area" size="3" maxlength="3"   onblur="validate(this,2,3);"> -->
+    <style>      
+      #login_wrapper { 
+          border: 3px solid rgb(30, 7, 241);
+          padding: 5px 20px;
+          position: absolute;
+          top: 30%;
+          left: 30%;
+          width: 700px; height: 500px;
+          margin-left: -220px;
+          margin-top : -170px;
+          
+          display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      } 
+      h1{
+        font-size: 25px;
+        padding-bottom: 20px;
+      }
+      form{
+        width: 550px;
+      }
+      .form > div{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 7px;
+        align-items: center;
+      }
+      .form > div > text{
+            text-align: left;
+            width: 500px;
+          }
+      label{
+        text-align: center;
+      }
+      button{
+        width: 100px;
+        margin:auto;
+        display:block;
+      }
+      input {
+        padding: 5px;
+        width: 300px;
+      }
+      
+    </style>
+    <div id="login_wrapper">
+        <form name="fomMain">
+          <!-- <form name="fomMain" action="http://localhost:3000/result" method="GET" ></form> -->
+          <table>
             <tr>
-                <td colspan="2" ><img src="a.png"></td>  
-                <td colspan="2" >
+                <td ><img src="images/main.png"></td>  
+                <td >
                   <table width="100%" style="text-align:center; border:none">
-                    <td colspan="2" >
+                    <td >
                       <font size="2">섭취한 식품의 </font>
                       <font size="5" >1회분량</font>
                       <font size="2">에 해당하는 영양소함량을 입력하세요</font>
@@ -22,44 +139,105 @@
                   </table>
               </td>        
             </tr>        
-        </table>
+          </table>
         <br>
           <div>
-            <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-            <label >섭취 식품명</label>
-            <input type="text" id="name" name="name" maxlength="20" >
-            <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+            <table>
+              <tr>
+                <a>&nbsp</a>
+              </tr>
+              <tr>
+                <td>
+                  <label >섭취 식품명</label>
+                </td>
+                <td>
+                  <input type="text" id="name" name="name" maxlength="20" onkeyup="MoveFocus();">
+                </td>
+                <td>
+                  <a>&nbsp</a>
+                </td>
+              </tr>
+            <tr>
+              <tr></tr>
+              <tr></tr>
+              <tr></tr>
+              <tr></tr>
+            </tr>
+              <tr>
+                <a>&nbsp</a>
+              </tr>
+              <tr>
+              <tr>
+                <td>
+                  <label >탄수화물</label>
+                </td>
+                <td>
+                  <input type='number' id="tan" name="tan" maxlength="20" onkeyup="MoveFocus();">
+                </td>
+                <td>
+                  <label>g</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label >단백질</label>
+                </td>
+                <td>
+                  <input type='number' id="dan" name="dan" maxlength="20"  onkeyup="MoveFocus();">
+                </td>
+                <td>
+                  <label>g</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label >지방</label>
+                </td>
+                <td>
+                  <input type='number' id="ji" name="ji" maxlength="20"  onkeyup="MoveFocus();">
+                </td>
+                <td>
+                  <label>g</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label >식이섬유</label>
+                </td>
+                <td>
+                  <input type='number' id="sic" name="sic" maxlength="20"  onkeyup="MoveFocus();">
+                </td>
+                <td>
+                  <label>g</label>
+                </td>
+              </tr>
+              <tr>
+                <a>&nbsp</a>
+              </tr>
+              <tr>
+              <tr></tr>
+              <tr></tr>
+              <tr></tr>
+              <tr></tr>
+              <tr>
+                <td>
+                  <label >섭취분량</label>
+                </td>
+                <td>
+                  <input type='number' id="sup" name="sup" maxlength="20"  onkeyup="MoveFocus();">
+                </td>
+                <td>
+                  <label>화분</label>
+                </td>
+              </tr>
+            </table>
           </div>
+          
           <br>
-          <div>
-            <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-            <label >탄수화물</label>
-            <input type="text" id="tan" name="tan" maxlength="20" >
-            <a>&nbsp g </a>
-          </div>
-          <div>
-            <label >단백질</label>
-            <input type="text" id="dan" name="dan" maxlength="20"  >
-            <a>&nbsp&nbsp&nbsp&nbsp&nbspg</a>
-          </div>
-          <div>
-            <label >지방</label>
-            <input type="text" id="ji" name="ji" maxlength="20"  >
-            <a>&nbsp&nbsp&nbsp&nbsp&nbspg</a>
-          </div>
-          <div>
-            <label >식이섬유</label>
-            <input type="text" id="sic" name="sic" maxlength="20"  >
-            <a>&nbsp&nbsp&nbsp&nbsp&nbspg</a>
-          </div>
-          <br>
-          <div>
-            <label >섭취분량</label>
-            <input type="text" id="sup" name="sup" maxlength="20"  >
-            <a>&nbsp화분</a>
-          </div>
-          <br>
-          <button type="submit" id="btn_login" >계 산</button>
+          <img id="btn_login"style="margin:auto;display:block;"   width="100" onclick='CheckLen()'src="images/main_cal.png">
+          <!-- <button onclick="validate()">클릭</button> 
+          <input type="button" id="btn_login" onclick="validate()" value="버튼1" /> -->
+          <!-- <button type="submit" id="btn_login" onclick="validate();">계 산</button> -->
           
       </div>  
     </form>

@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var RouterMain = require('./routes/index');
+var RouterMain = require('./routes/main');
 var RouterResult = require('./routes/result');
 
 var app = express();
@@ -14,7 +14,8 @@ var app = express();
 app.set('views', __dirname + '/views');
 // 화면 engine을 ejs로 설정
 app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
+// app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
