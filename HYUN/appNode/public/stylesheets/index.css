@@ -16,7 +16,7 @@
     width: 900px;
     height: 150px;
     display: flex;
-    margin: 50px auto 20px auto;
+    margin: 50px auto 0 auto;
 }
 .bb{
     width: 150px;
@@ -24,9 +24,9 @@
     margin: 0;
 }
 .page1_green_img{
-    width: 120px;
-    height: 120px;
-    margin : 0 0 0 70px;
+    width: 100px;
+    height: 100px;
+    margin : 10px 0 0 90px;
 }
 .hellomessage{
     display : flex;
@@ -52,15 +52,57 @@
 .insert_container{
     width :400px;
     height : 300px;
-    background-color: rgba(255, 236, 199, 0.658);
-    margin : 20px auto;
+    margin : 0 0 0 270px;
+    display: flex;
+}
+.insert_itmes1{
+    
+    width: 200px;
+    height: 400px;
 }
 .code{
     font-size :large;
     font-weight :bolder;
+    color : black;
+    width: 120px;
+    height: 35px;  
+    margin : 30px auto;
 }
+
 .codecode{
     display: flex;
-    margin : 30px auto;
+    margin : 25px auto;
  
+}
+.inputbox > input{
+    width: 130px;
+    height: 35px;
+    margin : 0 0 0 60px;
+    
+}
+.insert_container_button > button{
+    background-color: rgb(59, 77, 138);
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    color: white;  
+    font-weight :600;  
+    font-size :larger;
+    margin : 0 80px 0 0;
+
+}
+.insert_container_button > button:hover{
+    background-color: #727b96;
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    color: white;  
+    font-weight :600;  
+    font-size :larger;
+
+}
+.insert_container_button{
+    width: 400px;
+    height: 50px;
+    margin: 0 0 0 88px;
 }
