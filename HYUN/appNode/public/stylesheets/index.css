@@ -24,9 +24,9 @@
     margin: 0;
 }
 .page1_green_img{
-    width: 120px;
-    height: 120px;
-    margin : 0 0 0 70px;
+    width: 100px;
+    height: 100px;
+    margin : 10px 0 0 90px;
 }
 .hellomessage{
     display : flex;
@@ -52,15 +52,51 @@
 .insert_container{
     width :400px;
     height : 300px;
-    background-color: rgba(255, 236, 199, 0.658);
-    margin : 20px auto;
+    
+    margin : 20px 180px 20px auto;
 }
 .code{
     font-size :large;
     font-weight :bolder;
 }
+.code > label{
+    color : orange;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+}
 .codecode{
     display: flex;
     margin : 30px auto;
  
+}
+.inputbox > input{
+    width: 130px;
+    height: 35px;
+    
+}
+.insert_container_button > button{
+    background-color: rgb(59, 77, 138);
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    color: white;  
+    font-weight :600;  
+    font-size :larger;
+
+}
+.insert_container_button > button:hover{
+    background-color: #727b96;
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    color: white;  
+    font-weight :600;  
+    font-size :larger;
+
+}
+.insert_container_button{
+    width: 400px;
+    height: 50px;
+    margin: 0 0 0 88px;
 }
