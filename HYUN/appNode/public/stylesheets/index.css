@@ -16,7 +16,7 @@
     width: 900px;
     height: 150px;
     display: flex;
-    margin: 50px auto 20px auto;
+    margin: 50px auto 0 auto;
 }
 .bb{
     width: 150px;
@@ -52,27 +52,32 @@
 .insert_container{
     width :400px;
     height : 300px;
+    margin : 0 0 0 270px;
+    display: flex;
+}
+.insert_itmes1{
     
-    margin : 20px 180px 20px auto;
+    width: 200px;
+    height: 400px;
 }
 .code{
     font-size :large;
     font-weight :bolder;
-}
-.code > label{
-    color : orange;
+    color : black;
     width: 120px;
-    height: 35px;
-    text-align: center;
+    height: 35px;  
+    margin : 30px auto;
 }
+
 .codecode{
     display: flex;
-    margin : 30px auto;
+    margin : 25px auto;
  
 }
 .inputbox > input{
     width: 130px;
     height: 35px;
+    margin : 0 0 0 60px;
     
 }
 .insert_container_button > button{
@@ -83,6 +88,7 @@
     color: white;  
     font-weight :600;  
     font-size :larger;
+    margin : 0 80px 0 0;
 
 }
 .insert_container_button > button:hover{

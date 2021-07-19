@@ -24,111 +24,127 @@
 
 
     <div class="insert_container">
-        <form action="/form_receiver" method="post" onsubmit="return formCheck()">
-            <div class="codecode">
-                <div class="code">
-                    <label>섭취 식품명</label> 
-                </div>
-                <div class="inputbox">
-                    <input type="text" id="food" name="food"></input> 
-                </div>
+        <div class="insert_items1">
+            <div class="code">
+                    <label >섭취 식품명</label> 
             </div>
 
-            <div class="codecode">
-                <div class="code">
+            <div class="code">
                     <label>탄수화물</label> 
-                </div>
-                <div class="inputbox">
-                    <input type="number" step="0.001" id="cb" name="cb"></input> g
-                </div>
             </div>
 
-            <div class="codecode">
-                <div class="code">
+            <div class="code">
                     <label>단백질</label>
-                </div>
-                <div class="inputbox">
-                    <input type="number" step="0.001" id="pr" name="pr"></input> g
-                </div>
+            </div>
+
+            <div class="code">
+                    <label>지방</label>
+            </div>
+
+            <div class="code">
+                    <label>식이섬유</label>
             </div>
             
-            <div class="codecode">
-                <div class="code">
-                    <label>지방</label>
-                </div>
-                <div class="inputbox">
-                    <input type="number" step="0.001" id="fat" name="fat"></input> g
-                </div>
-            </div>
-
-            <div class="codecode">
-                <div class="code">
-                    <label>식이섬유</label>
-                </div>
-                <div class="inputbox">
-                    <input type="number" step="0.001" id="df" name="df"></input> g
-                </div>
-            </div>
-
-            <div class="codecode">
-                <div class="code">
+            <div class="code">
                     <label>섭취분량</label>
-                </div>
-                <div class="inputbox">
-                    <input type="number" step="0.001" id="it" name="it"></input> 회분
-                </div>
             </div>
-            <div class="insert_container_button">
-                <button type="submit" class="u">계산</button>
-            </div>
-        </form>
+        </div>
 
-        <script>
-            function formCheck(){
-                var length = document.forms[0].length - 1; //submit을 제외한 모든 input 태그의 갯수를 가져옴
+        <div class="insert_items2">
+            <form action="/form_receiver" method="post" onsubmit="return formCheck()">
+                <div class="codecode">
+                    
+                    <div class="inputbox">
+                        <input type="text" id="food" name="food" dir="rtl"></input> 
+                    </div>
+                </div>
 
-                var food = document.forms[0].food.value;
-                var cb = document.forms[0].cb.value;
-                var pr = document.forms[0].pr.value;
-                var fat = document.forms[0].fat.value;
-                var df = document.forms[0].df.value;
-                var it = document.forms[0].it.value;
+                <div class="codecode">
+                    
+                    <div class="inputbox">
+                        <input type="number" step="0.001" id="cb" name="cb" dir="rtl"></input> g
+                    </div>
+                </div>
+
+                <div class="codecode">
+                    
+                    <div class="inputbox">
+                        <input type="number" step="0.001" id="pr" name="pr"></input> g
+                    </div>
+                </div>
                 
-                if (food == null || food == "") { // null인지 비교한 뒤
-                    alert('섭취하신 식품명을 입력해주세요!'); // 경고창을 띄우고
-                    document.forms[0].food.focus(); // 해당태그에 포커스를 준뒤
-                    return false; // false를 리턴합니다.
-                }
+                <div class="codecode">
+                    
+                    <div class="inputbox">
+                        <input type="number" step="0.001" id="fat" name="fat"></input> g
+                    </div>
+                </div>
 
-                if (cb == null || cb == "") { 
-                    alert('탄수화물 값을 입력해주세요!'); 
-                    document.forms[0].cb.focus(); 
-                    return false; 
-                 }
-                 if (pr == null || pr == "") { 
-                    alert('단백질 값을 입력해주세요!');
-                    document.forms[0].pr.focus(); 
-                    return false; 
-                 }
-                 if (fat == null || fat == "") {
-                    alert('지방 값을 입력해주세요!');
-                    document.forms[0].fat.focus(); 
-                    return false; 
-                 }
-                 if (df == null || df == "") { 
-                    alert('식이섬유 값을 입력해주세요!'); 
-                    document.forms[0].df.focus(); 
-                    return false; 
-                 }
-                 if (it == null || it == "") { 
-                    alert('섭취분량 값을 입력해주세요!'); 
-                    document.forms[0].it.focus(); 
-                    return false; 
-                 }
+                <div class="codecode">
+                    
+                    <div class="inputbox">
+                        <input type="number" step="0.001" id="df" name="df"></input> g
+                    </div>
+                </div>
 
-            }
-        </script>
+                <div class="codecode">
+                    
+                    <div class="inputbox">
+                        <input type="number" step="0.001" id="it" name="it"></input> 회분
+                    </div>
+                </div>
+                <div class="insert_container_button">
+                    <button type="submit" class="u">계산</button>
+                </div>
+            </form>
+        </div>    
     </div>
+
+    <script>
+        function formCheck(){
+            var length = document.forms[0].length - 1; //submit을 제외한 모든 input 태그의 갯수를 가져옴
+
+            var food = document.forms[0].food.value;
+            var cb = document.forms[0].cb.value;
+            var pr = document.forms[0].pr.value;
+            var fat = document.forms[0].fat.value;
+            var df = document.forms[0].df.value;
+            var it = document.forms[0].it.value;
+            
+            if (food == null || food == "") { // null인지 비교한 뒤
+                alert('섭취하신 식품명을 입력해주세요!'); // 경고창을 띄우고
+                document.forms[0].food.focus(); // 해당태그에 포커스를 준뒤
+                return false; // false를 리턴합니다.
+            }
+
+            if (cb == null || cb == "") { 
+                alert('탄수화물 값을 입력해주세요!'); 
+                document.forms[0].cb.focus(); 
+                return false; 
+             }
+             if (pr == null || pr == "") { 
+                alert('단백질 값을 입력해주세요!');
+                document.forms[0].pr.focus(); 
+                return false; 
+             }
+             if (fat == null || fat == "") {
+                alert('지방 값을 입력해주세요!');
+                document.forms[0].fat.focus(); 
+                return false; 
+             }
+             if (df == null || df == "") { 
+                alert('식이섬유 값을 입력해주세요!'); 
+                document.forms[0].df.focus(); 
+                return false; 
+             }
+             if (it == null || it == "") { 
+                alert('섭취분량 값을 입력해주세요!'); 
+                document.forms[0].it.focus(); 
+                return false; 
+             }
+
+        }
+    </script>
 
         </div>
     </div>
