@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var url = require('url');
 
-
+//  main
 router.get('/', (req, res) => {
   res.render('main.html');
 })
