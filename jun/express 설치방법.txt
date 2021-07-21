@@ -4,9 +4,10 @@
 //  express 설치 : npm install express-generator -g --save	-> node_modules 폴더가 생성된다.
 //  express 프로젝트 생성 : express eGL --view=pug -> eGL 이라는 프로젝트 폴더가 생성된다.
 //  express 관련 설치 : 	
-npm install http-errors
-npm install cookie-parser
-npm install morgan
-npm install debug
-npm install pug
+npm install http-errors -g
+npm install cookie-parser -g
+npm install morgan -g
+npm install debug -g
+npm install pug -g
 
+sudo ufw allow 3000/tcp

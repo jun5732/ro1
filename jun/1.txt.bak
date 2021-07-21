@@ -1,0 +1,8 @@
+
+forever start -c "npm start" ./
+netstat -ntlp | grep :3000
+netstat -ntlp | grep :3001
+netstat -ntlp | grep :3002
+
+45.120.69.37 3001
+http://45.120.69.37:3001/

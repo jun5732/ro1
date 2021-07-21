@@ -2,6 +2,7 @@
     <!doctype html>
     <html>
       <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <script type="text/javascript">
           function MoveFocus() {
             if (window.event.keyCode == 13) {              
@@ -64,7 +65,7 @@
             else
             {
               var frm=document.fomMain;  //폼 name
-              frm.action="http://localhost:3000/result";  //이동할 페이지
+              frm.action="/result";  //이동할 페이지
               frm.method="get";  //POST방식
               frm.submit();
             }
@@ -79,13 +80,8 @@
     <style>      
       #login_wrapper { 
           border: 3px solid rgb(30, 7, 241);
-          padding: 5px 20px;
-          position: absolute;
-          top: 30%;
-          left: 30%;
-          width: 700px; height: 500px;
-          margin-left: -220px;
-          margin-top : -170px;
+          width: 100%;
+          height: auto;
           
           display: flex;
         flex-direction: column;
@@ -97,7 +93,7 @@
         padding-bottom: 20px;
       }
       form{
-        width: 550px;
+        width: 250px;
       }
       .form > div{
         display: flex;
@@ -119,7 +115,7 @@
       }
       input {
         padding: 5px;
-        width: 300px;
+        width: 100px;
       }
       
     </style>
@@ -133,7 +129,7 @@
                   <table width="100%" style="text-align:center; border:none">
                     <td >
                       <font size="2">섭취한 식품의 </font>
-                      <font size="5" >1회분량</font>
+                      <font size="4" >1회분량</font>
                       <font size="2">에 해당하는 영양소함량을 입력하세요</font>
                     </td>        
                   </table>

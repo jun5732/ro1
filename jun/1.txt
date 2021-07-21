@@ -1,0 +1,23 @@
+forever list
+forever start -c "npm start" ./
+forever stop -c "npm start" ./
+netstat -ntlp | grep :3000
+netstat -ntlp | grep :3001
+netstat -ntlp | grep :3002
+
+forever start www
+
+45.120.69.37 3001
+http://45.120.69.37:3001/
+
+
+npm install forever -g
+yum install wget
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+npm install express-generator -g
+npm install
+
+
+firewall-cmd --zone=public --permanent --add-port=3306/tcp
