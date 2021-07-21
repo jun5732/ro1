@@ -93,7 +93,10 @@
         padding-bottom: 20px;
       }
       form{
-        width: 250px;
+          left: 30%;
+          width: 70%;
+          height: auto;
+          padding-bottom: 10px;
       }
       .form > div{
         display: flex;
@@ -136,12 +139,10 @@
               </td>        
             </tr>        
           </table>
-        <br>
+          <br>
           <div>
             <table>
-              <tr>
-                <a>&nbsp</a>
-              </tr>
+              <tr></tr>
               <tr>
                 <td>
                   <label >섭취 식품명</label>
@@ -153,16 +154,7 @@
                   <a>&nbsp</a>
                 </td>
               </tr>
-            <tr>
               <tr></tr>
-              <tr></tr>
-              <tr></tr>
-              <tr></tr>
-            </tr>
-              <tr>
-                <a>&nbsp</a>
-              </tr>
-              <tr>
               <tr>
                 <td>
                   <label >탄수화물</label>
@@ -212,9 +204,6 @@
               </tr>
               <tr>
               <tr></tr>
-              <tr></tr>
-              <tr></tr>
-              <tr></tr>
               <tr>
                 <td>
                   <label >섭취분량</label>
@@ -226,15 +215,13 @@
                   <label>화분</label>
                 </td>
               </tr>
+              <tr></tr>
+              <tr>
+                <td></td>
+                <td><img id="btn_login"style="margin:auto;display:block;"   width="100" onclick='CheckLen()'src="images/main_cal.png"></td>
+              </tr>
             </table>
-          </div>
-          
-          <br>
-          <img id="btn_login"style="margin:auto;display:block;"   width="100" onclick='CheckLen()'src="images/main_cal.png">
-          <!-- <button onclick="validate()">클릭</button> 
-          <input type="button" id="btn_login" onclick="validate()" value="버튼1" /> -->
-          <!-- <button type="submit" id="btn_login" onclick="validate();">계 산</button> -->
-          
+          </div>          
       </div>  
     </form>
   </body>
