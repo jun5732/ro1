@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .wrap{
     margin: 0;
@@ -93,4 +94,101 @@ button {
 button[type="submit"] {
     border: 3px ;
     
+=======
+
+.wrap{
+    margin: 0;
+	padding: 0;
+    text-align: center;
+}
+
+.page1_container{
+    width: 900px;
+	height: 700px;
+	
+	margin: auto;
+    border-style :solid;
+    border-color: rgb(119, 179, 235) ;
+}
+.container_header{
+    width: 900px;
+    height: 150px;
+    display: flex;
+    margin: 50px auto 20px auto;
+}
+.bb{
+    width: 150px;
+    height: 120;
+    margin: 0;
+}
+.page1_green_img{
+    width: 120px;
+    height: 120px;
+    margin : 0 0 0 70px;
+}
+.hellomessage{
+    display : flex;
+    width: 600px;
+    height: 60px;
+    margin : 43px auto;
+}
+.first{
+    width: 180px;
+    height: 40px;
+}
+.second{
+    width: 200px;
+    height: 40px;
+    margin-top: -5px;
+    
+
+}
+.third{
+    width: 480px;
+    height: 40px;
+}
+.insert_container{
+    width :400px;
+    height : 300px;
+    
+    margin : 20px auto;
+    text-align: center;
+}
+.code{
+    margin-right: 15px;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    font-size :large;
+    font-weight :bolder;
+}
+.codecode{
+    
+    text-align: center;
+    display: flex;
+    margin : 30px auto;
+ 
+}
+.codecode input{
+    width: 120px;
+    height: 35px;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border: 3px  ;
+    font-size: 20px;
+    color :white;
+    cursor: pointer;
+    background : #0078FF;
+    border:1px solid black;
+    margin-right: px;
+    margin-top: 0px;
+    padding: 0 20px;
+}
+button[type="submit"] {
+    border: 3px ;
+    
+>>>>>>> @as73016463
 }

@@ -6,14 +6,13 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var testRouter = require('./routes/test');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
 // 셋팅값 찾아보기
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); 
 app.engine('html', require('ejs').renderFile);
 
 app.use(logger('dev')); 
@@ -25,10 +24,6 @@ app.use(express.static(path.join(__dirname, 'public'))); // public폴더에서 �
 //라우터랑 연결 
 app.use('/', indexRouter); 
 app.use('/test', testRouter);
-
-
-app.use('/users', usersRouter);
-
 
 //next함수
 // catch 404 and forward to error handler
