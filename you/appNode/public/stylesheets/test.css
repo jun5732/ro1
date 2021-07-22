@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .wrap{
     margin: 0;
 	padding: 0;
@@ -125,7 +125,7 @@
     font-size: 20px;
     
 }
-=======
+
 .wrap{
     margin: 0;
 	padding: 0;
@@ -252,4 +252,88 @@
     font-size: 20px;
     
 }
->>>>>>> @as73016463
+
+
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+
+
+@media(max-width:600px){
+    body {
+        
+        font-size:0.9em;
+        text-align: center;
+        
+    }
+    #grid{
+        display:inline;
+    }
+    
+    .page1_container{
+        width: 300px;
+	    height: auto;
+    }
+
+    .container_header{
+        width: 200px;
+        height: auto;
+        display:inline;
+    }
+
+    .wjqtl{
+        max-width: 50%;
+        max-height: 30%;
+        float: left;
+        margin-left: 0%;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .hellomessage{
+        font-size: 0.7em;
+        max-width: 90px;
+        display: inline;
+        text-align: center; 
+    }
+    .egl_number input{
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .alxdp{
+        position: relative;
+        margin-left: 15%;
+        width: 200px;
+        height: 125px;
+        margin-bottom: 5px;
+    }
+    .wkf{
+        font-size: 5px;
+    }
+    .wkf input{
+        
+        font-size: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    .wjr{
+        font-size: 5px;
+    }
+    .wjr input{
+        text-align: center;
+        font-size: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    .wndml{
+        font-size: 5px;
+    }
+    .wndml input{
+        font-size: 5px;
+        width: 30px;
+        height: 30px;
+    }
+}
